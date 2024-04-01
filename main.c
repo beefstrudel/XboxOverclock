@@ -44,15 +44,12 @@ Settings loadSettings() {
     if (file != NULL) {
         fread(&settings, sizeof(Settings), 1, file);
         fclose(file);
-        // Adjust the loaded memory divider value
-        settings.memoryDivider -= 1;
         debugPrint("Settings loaded from file: FSB = %d, NVCLK = %d, Memory Divider = %d\n", settings.fsb, settings.nvclk, settings.memoryDivider);
     } else {
         debugPrint("No settings file found. Using current system clock settings.\n");
     }
     return settings;
 }
-
 // Function to calculate clock parameters
 void calc_clock_params(int clk, int *n, int *m) {
     int work1, work2, work4;
@@ -178,9 +175,20 @@ int main(void) {
     debugPrint("Press \"Back\" to exit.");
     debugResetCursor();
 
-    ULONGLONG counter = 0;
-
+    // Load settings from file
     Settings currentSettings = loadSettings();
+
+    // Apply loaded settings or fall back to current system settings
+    if (currentSettings.fsb != 0 || currentSettings.nvclk != 0 || currentSettings.memoryDivider != 0) {
+        wanted_fsb = currentSettings.fsb;
+        wanted_nvclk = currentSettings.nvclk;
+        wanted_mp = currentSettings.memoryDivider;
+
+        // Output the loaded clock settings to the screen
+        outputClocks();
+    }
+
+    ULONGLONG counter = 0;
 
     while (1) {
         XVideoWaitForVBlank();
