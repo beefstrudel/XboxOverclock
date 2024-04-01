@@ -21,7 +21,7 @@ Running
 ---------
 
 Once you boot into the xbe you'll see a prompt. Use the left and right D-Pad to change the wanted FSB frequency, use the up and down D-Pad to change NVCLK frequency.
-This fork adds the ability to save the current settings with th Y button. Settings will auto load when the program starts. 
+This fork adds the ability to save the current settings with the Y button. Settings will auto load when the program starts. 
 
 Hints
 ---------
