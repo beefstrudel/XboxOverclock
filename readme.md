@@ -6,7 +6,7 @@ XboxOverclock will allow you to overclock the FSB and NVCLK via software. It use
 Note: Text formatting on this fork needs work. 
 If text on screen is overwritten all the controls are here.
 
-Use the left and right DPAD\ to change the FSB.
+Use the left and right DPAD to change the FSB.
 
 Use the up and down DPAD to change the NVCLK.
 
