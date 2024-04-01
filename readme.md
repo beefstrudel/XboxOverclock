@@ -23,7 +23,7 @@ See the requirements for [nxdk](https://github.com/XboxDev/nxdk/wiki/Install-the
 
 
 ```sh
-git clone https://github.com/GXTX/XboxOverclock
+git clone https://github.com/beefstrudel/XboxOverclock
 cd XboxOverclock
 eval $(../nxdk/bin/activate -s) make -f Makefile.nxdk
 ```
