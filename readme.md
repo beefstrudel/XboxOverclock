@@ -1,7 +1,16 @@
-XboxOverclock
+XboxOverclock with saving and reloading ability
 ============
 
 XboxOverclock will allow you to overclock the FSB and NVCLK via software. It uses infromation gained from [XBOverclock](https://github.com/WulfyStylez/XBOverclock) by WulfyStylez.
+
+Note: Text formatting on this fork needs work. 
+If text on screen is overwritten all the controls are here.
+
+Use the left and right DPAD\ to change the FSB.
+Use the up and down DPAD to change the NVCLK.
+Use X and A to change the memory divider.
+Use Y to save overclock settings.
+Press Start to apply (which will auto reboot).
 
 Building
 ---------
